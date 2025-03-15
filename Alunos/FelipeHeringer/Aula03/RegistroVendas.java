@@ -22,7 +22,7 @@ public class RegistroVendas {
     }
     public void  visualizarRegistrosVendas() {
         registroVendas.entrySet().stream()
-                .forEach(entry -> System.out.println("Venda No: " + entry.getKey() + ":"
+                .forEach(entry -> System.out.println("Venda No: " + entry.getKey() + "->"
                         + " Quntidade de Plantas = " + entry.getValue().get(0)
                         + " Valor da Venda = " +  entry.getValue().get(1)
                         + " Desconto Aplicado = " + entry.getValue().get(2)
