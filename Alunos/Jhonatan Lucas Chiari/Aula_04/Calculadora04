@@ -1,0 +1,119 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Calculadora04 {
+    static class Venda {
+        int quantidade;
+        double valorTotal;
+        double desconto;
+        int dia;
+        int mes;
+
+        Venda(int quantidade, double valorTotal, double desconto, int dia, int mes) {
+            this.quantidade = quantidade;
+            this.valorTotal = valorTotal;
+            this.desconto = desconto;
+            this.dia = dia;
+            this.mes = mes;
+        }
+    }
+
+    private static final List<Venda> registroVendas = new ArrayList<>();
+
+    public static double calcularPrecoTotal(int quantidade, double precoUnitario, int dia, int mes) {
+        double precoTotal = quantidade * precoUnitario;
+        double desconto = 0;
+
+        if (quantidade > 10) {
+            desconto = precoTotal * 0.05;
+            precoTotal -= desconto;
+        }
+
+        registroVendas.add(new Venda(quantidade, precoTotal, desconto, dia, mes));
+        return precoTotal;
+    }
+
+    public static double calcularTroco(double valorRecebido, double valorTotal) {
+        return valorRecebido - valorTotal;
+    }
+
+    public static void exibirRegistroVendas() {
+        System.out.println("\nRegistro de Vendas:");
+        for (Venda venda : registroVendas) {
+            System.out.printf("Quantidade Plantas: %d | Valor Total: R$ %.2f | Desconto: R$ %.2f | Data: %02d/%02d\n",
+                    venda.quantidade, venda.valorTotal, venda.desconto, venda.dia, venda.mes);
+        }
+    }
+
+    public static void buscarVendasData(int dia, int mes) {
+        int totalVendas = 0;
+        for (Venda venda : registroVendas) {
+            if (venda.dia == dia && venda.mes == mes) {
+                totalVendas += venda.quantidade;
+            }
+        }
+        System.out.printf("O total de vendas em %02d/%02d: %d plantas\n", dia, mes, totalVendas);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
+
+        do {
+            System.out.println("\nEscolha uma opção:");
+            System.out.println("1 - Calcular Preço Total");
+            System.out.println("2 - Calcular Troco");
+            System.out.println("3 - Exibir Registro de Vendas");
+            System.out.println("4 - Sair");
+            System.out.println("5 - Buscar Vendas por Data");
+
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Digite a quantidade de plantas: ");
+                    int quantidade = scanner.nextInt();
+                    System.out.println("Digite o valor de cada planta: ");
+                    double precoUnitario = scanner.nextDouble();
+                    System.out.println("Digite o dia da venda: ");
+                    int dia = scanner.nextInt();
+                    System.out.println("Digite o mês da venda: ");
+                    int mes = scanner.nextInt();
+                    double precoTotal = calcularPrecoTotal(quantidade, precoUnitario, dia, mes);
+                    System.out.printf("O preço total com desconto é: R$ %.2f\n", precoTotal);
+                    break;
+
+                case 2:
+                    System.out.println("Digite o valor recebido: ");
+                    double valorRecebido = scanner.nextDouble();
+                    System.out.println("Digite o valor total da compra: ");
+                    double valorTotal = scanner.nextDouble();
+                    double troco = calcularTroco(valorRecebido, valorTotal);
+                    System.out.printf("O troco a ser dado ao cliente é: R$ %.2f\n", troco);
+                    break;
+
+                case 3:
+                    exibirRegistroVendas();
+                    break;
+
+                case 5:
+                    System.out.println("Digite o dia que deseja buscar: ");
+                    int diaBusca = scanner.nextInt();
+                    System.out.println("Digite o mês que deseja buscar: ");
+                    int mesBusca = scanner.nextInt();
+                    buscarVendasData(diaBusca, mesBusca);
+                    break;
+
+                case 4:
+                    System.out.println("Saindo...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+        } while (opcao != 4);
+
+        scanner.close();
+    }
+}
