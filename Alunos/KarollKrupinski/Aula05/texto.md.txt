@@ -1,0 +1,33 @@
+Paradigmas de Programação: Imperativo vs. Declarativo
+
+A programação de computadores pode ser categorizada em diferentes paradigmas, cada um com uma abordagem distinta para a solução de problemas. Dois paradigmas fundamentais são o imperativo e o declarativo.
+
+Programação Imperativa
+
+A programação imperativa é baseada na definição de uma sequência de instruções que alteram o estado do programa ao longo do tempo. Linguagens como C, Java e Python seguem esse paradigma. O foco está em como a tarefa deve ser realizada, utilizando estruturas como loops, condicionais e variáveis mutáveis.
+
+Exemplo em Java
+
+O código abaixo implementa a verificação de números pares utilizando o paradigma imperativo:
+
+Neste código, a função ehPar calcula o resto da divisão por 2 e retorna true se for igual a zero. A execução segue um fluxo lógico bem definido, alterando o estado do programa conforme necessário.
+
+Programação Declarativa
+
+A programação declarativa, ao contrário da imperativa, enfatiza o que deve ser feito em vez de como fazê-lo. Prolog, SQL e Haskell são exemplos de linguagens declarativas. Esse paradigma foca em expressar a lógica do problema sem definir explicitamente o controle do fluxo.
+
+Exemplo em Prolog
+
+O mesmo problema da verificação de números pares pode ser resolvido em Prolog da seguinte forma:
+
+Consulta:
+
+Aqui, declaramos uma regra par(X), que retorna verdadeiro se X mod 2 for zero. O Prolog, ao receber uma consulta (?- par(4).), verifica a base de conhecimento e retorna true ou false sem a necessidade de controle explícito do fluxo de execução.
+
+Comparação Entre os Paradigmas
+
+A abordagem imperativa exige um detalhamento explícito de cada passo da execução, enquanto a declarativa abstrai esses detalhes e se concentra na lógica do problema.
+
+Conclusão
+
+A escolha entre programação imperativa e declarativa depende do contexto e do problema a ser resolvido. O paradigma imperativo é mais intuitivo para quem está acostumado a controlar diretamente o fluxo do programa, enquanto o declarativo pode ser mais expressivo e eficiente para problemas que envolvem regras lógicas e inferência. Ambos têm suas vantagens e desvantagens, sendo úteis em diferentes cenários da computação.
