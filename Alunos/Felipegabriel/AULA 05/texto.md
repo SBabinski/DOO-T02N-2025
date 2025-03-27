@@ -1,11 +1,10 @@
-Comparação entre Paradigmas Imperativo e Declarativo: Análise de Códigos em Java e Prolog
+### Comparação entre Paradigmas Imperativo e Declarativo: Análise de Códigos em Java e Prolog
 Na aula teórica do dia 20/03/2025, discutimos dois paradigmas de programação bastante distintos: imperativo e declarativo. O paradigma imperativo foca em como as coisas devem ser feitas, com instruções passo a passo, enquanto o declarativo descreve o que deve ser feito, deixando o sistema decidir a melhor forma de alcançar o objetivo.
 
-A seguir, vamos comparar dois trechos de código que atingem o mesmo objetivo — verificar se um número é primo —, sendo um em Java (imperativo) e o outro em Prolog (declarativo).
+### A seguir, vamos comparar dois trechos de código que atingem o mesmo objetivo — verificar se um número é primo —, sendo um em Java (imperativo) e o outro em Prolog (declarativo).
 
 Código em Java (Paradigma Imperativo)
-java
-Copiar
+```java
 public class Primo {
     public static boolean isPrimo(int num) {
         if (num <= 1) return false;
@@ -24,7 +23,7 @@ public class Primo {
         }
     }
 }
-O código em Java define um procedimento passo a passo para verificar se um número é primo. Ele usa um loop para testar divisores até a raiz quadrada do número, retornando false caso algum divisor seja encontrado. O programador define claramente como o problema será resolvido, detalhando cada etapa.
+### O código em Java define um procedimento passo a passo para verificar se um número é primo. Ele usa um loop para testar divisores até a raiz quadrada do número, retornando false caso algum divisor seja encontrado. O programador define claramente como o problema será resolvido, detalhando cada etapa.
 
-Conclusão
+### Conclusão
 Os paradigmas imperativo e declarativo oferecem maneiras muito diferentes de resolver problemas. Enquanto o imperativo foca em controlar cada passo do processo, o declarativo descreve as propriedades do problema e deixa o sistema decidir a melhor forma de solucioná-lo. Ambos têm suas vantagens, e a escolha entre eles depende do contexto e da natureza do problema a ser resolvido.
