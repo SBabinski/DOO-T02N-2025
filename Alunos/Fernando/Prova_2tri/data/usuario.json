@@ -1,0 +1,47 @@
+{
+  "nome": "Fernando",
+  "favoritas": [
+    {
+      "nome": "Lost",
+      "idioma": "English",
+      "generos": [
+        "Drama",
+        "Adventure",
+        "Supernatural"
+      ],
+      "notaGeral": 8.2,
+      "status": "Ended",
+      "dataEstreia": "2004-09-22",
+      "dataFim": "2010-05-23",
+      "emissora": "ABC"
+    },
+    {
+      "nome": "Two and a Half Men",
+      "idioma": "English",
+      "generos": [
+        "Comedy"
+      ],
+      "notaGeral": 6.6,
+      "status": "Ended",
+      "dataEstreia": "2003-09-22",
+      "dataFim": "2015-02-19",
+      "emissora": "CBS"
+    },
+    {
+      "nome": "Vikings",
+      "idioma": "English",
+      "generos": [
+        "Drama",
+        "Action",
+        "History"
+      ],
+      "notaGeral": 8.6,
+      "status": "Ended",
+      "dataEstreia": "2013-03-03",
+      "dataFim": "2021-03-05",
+      "emissora": "History"
+    }
+  ],
+  "assistidas": [],
+  "desejadas": []
+}
