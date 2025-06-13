@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "c:\\Users\\prosk\\OneDrive\\Documentos\\GitHub\\Lib\\jackson-databind.jar",
+        "c:\\Users\\prosk\\OneDrive\\Documentos\\GitHub\\Lib\\jackson-core.jar",
+        "c:\\Users\\prosk\\OneDrive\\Documentos\\GitHub\\Lib\\jackson-annotations.jar",
+        "c:\\Users\\prosk\\OneDrive\\Documentos\\GitHub\\Lib\\gson.jar",
+        "c:\\Users\\prosk\\OneDrive\\Documentos\\GitHub\\Lib\\json.jar"
+    ],
+    "java.project.sourcePaths": [
+        "."
+    ]
+}
