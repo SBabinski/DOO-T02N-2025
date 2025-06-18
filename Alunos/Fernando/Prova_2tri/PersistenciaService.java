@@ -11,7 +11,7 @@ public class PersistenciaService {
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public PersistenciaService() {
-        this.caminho = "C:/Users/prosk/OneDrive/Documentos/GitHub/DOO-T02N-2025/Alunos/Fernando/Trabalho/data/usuario.json";
+        this.caminho = "C:/Users/prosk/OneDrive/Documentos/GitHub/DOO-T02N-2025/Alunos/Fernando/Prova_2tri/data/usuario.json";
     }
 
     public void salvar(Usuario usuario) throws IOException {
