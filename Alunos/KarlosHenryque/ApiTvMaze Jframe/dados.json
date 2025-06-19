@@ -1,0 +1,55 @@
+{
+  "favoritos": [
+    {
+      "id": 481,
+      "name": "The Batman",
+      "language": "English",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science-Fiction"
+      ],
+      "rating": {
+        "average": 7.7
+      },
+      "status": "Ended",
+      "premiered": "2004-09-11",
+      "ended": "2008-03-08",
+      "network": {
+        "name": "The CW"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/3/9370.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/3/9370.jpg"
+      }
+    },
+    {
+      "id": 161,
+      "name": "Dexter",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Mystery"
+      ],
+      "rating": {
+        "average": 8.4
+      },
+      "status": "Ended",
+      "premiered": "2006-10-01",
+      "ended": "2013-09-22",
+      "network": {
+        "name": "Paramount+ with Showtime"
+      },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/498/1246067.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/498/1246067.jpg"
+      }
+    }
+  ],
+  "assistidas": [],
+  "desejaAssistir": [],
+  "nomesUsuarios": [
+    "karlos"
+  ]
+}
