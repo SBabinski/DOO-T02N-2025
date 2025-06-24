@@ -33,7 +33,7 @@ public class ClimaService {
             resposta.append(linha);
         }
         leitor.close();
-       // System.out.println("JSON da API:\n" + resposta.toString()); esse é o json que vem da api, usei pra debugar
+       // System.out.println("JSON da API:\n" + resposta.toString());
         return parseJson(resposta.toString());
     }
 
@@ -52,10 +52,10 @@ public class ClimaService {
     clima.setPrecipitacao(atual.has("precip") ? atual.get("precip").asDouble() : 0.0);
     clima.setVentoVelocidade(atual.has("windspeed") ? atual.get("windspeed").asDouble() : 0.0);
     clima.setVentoDirecao(atual.has("winddir") ? String.valueOf(atual.get("winddir").asDouble()) : "Não informado");
+    
 } else {
     clima.setTemperaturaAtual(hoje.get("temp").asDouble()); 
     clima.setUmidade(hoje.get("humidity").asDouble());
-    // Aqui vem a correção:
     clima.setCondicao(hoje.has("conditions") ? hoje.get("conditions").asText() : "Não informado");
     clima.setPrecipitacao(hoje.has("precip") ? hoje.get("precip").asDouble() : 0.0);
     clima.setVentoVelocidade(hoje.has("windspeed") ? hoje.get("windspeed").asDouble() : 0.0);
@@ -65,6 +65,8 @@ public class ClimaService {
 
     clima.setTemperaturaMaxima(hoje.get("tempmax").asDouble());
     clima.setTemperaturaMinima(hoje.get("tempmin").asDouble());
+    clima.setLocalCompleto(raiz.get("resolvedAddress").asText());
+
 
     return clima;
 }

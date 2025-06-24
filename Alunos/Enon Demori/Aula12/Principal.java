@@ -5,14 +5,14 @@ public class Principal {
 public static Scanner scan = new Scanner(System.in);
 
 public static void consultarClima() {
-    scan.nextLine(); // limpar buffer
+    scan.nextLine();
     System.out.println("Digite o nome da cidade que deseja consultar:");
     String cidade = scan.nextLine();
 
     try {
         WeatherData clima = ClimaService.obterDadosClimaticos(cidade);
 
-        System.out.println("=== Dados do clima para " + cidade + " ===");
+        System.out.printf("║  CLIMA EM %-30s \n", clima.getLocalCompleto().toUpperCase());
         System.out.println("Temperatura atual: " + clima.getTemperaturaAtual() + "°C");
         System.out.println("Máxima do dia: " + clima.getTemperaturaMaxima() + "°C");
         System.out.println("Mínima do dia: " + clima.getTemperaturaMinima() + "°C");
