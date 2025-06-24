@@ -1,0 +1,25 @@
+{
+  "nome": "Julia",
+  "favoritos": [],
+  "assistidas": [
+    {
+      "name": "Jane the Virgin",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Romance"
+      ],
+      "status": "Ended",
+      "premiered": "2014-10-13",
+      "ended": "2019-07-31",
+      "rating": {
+        "average": 7.4
+      },
+      "network": {
+        "name": "The CW"
+      }
+    }
+  ],
+  "desejadas": []
+}
