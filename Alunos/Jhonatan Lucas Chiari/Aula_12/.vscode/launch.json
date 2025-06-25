@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Aula_12_a1e9223"
+        },
+        {
+            "type": "java",
+            "name": "Weather App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Aula_12"
+        }
+    ]
+}
