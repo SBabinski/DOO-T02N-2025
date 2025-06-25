@@ -24,6 +24,17 @@ public class SerieApp {
         if (serieManager == null) {
             // se não tiver séries salvas cria uma nova lista vazia
             serieManager = new SerieManager();
+        } else {
+            // remove duplicatas das listas usando distinct
+            serieManager.setFavoritos(
+                serieManager.getFavoritos().stream().distinct().toList()
+            );
+            serieManager.setAssistidas(
+                serieManager.getAssistidas().stream().distinct().toList()
+            );
+            serieManager.setDesejo(
+                serieManager.getDesejo().stream().distinct().toList()
+            );
         }
         // abre a janela principal da aplicação, passando usuário e séries
         new JanelaPrincipal(usuario, serieManager).setVisible(true);
