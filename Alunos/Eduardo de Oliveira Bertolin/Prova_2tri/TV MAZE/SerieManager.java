@@ -1,6 +1,7 @@
 import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
+import javax.swing.JOptionPane;
 
 // gerenciar as listas de séries do usuário
 public class SerieManager implements Serializable {
@@ -11,8 +12,7 @@ public class SerieManager implements Serializable {
     // deseja assistir
     private List<Serie> desejo = new ArrayList<>();
 
-    //getter
-
+    // getters
     public List<Serie> getFavoritos() {
         return favoritos;
     }
@@ -25,12 +25,26 @@ public class SerieManager implements Serializable {
         return desejo;
     }
 
-
+    // setters para sobrescrever listas (útil para remover duplicatas)
+    public void setFavoritos(List<Serie> favoritos) {
+        this.favoritos = new ArrayList<>(favoritos);
+    }
+    public void setAssistidas(List<Serie> assistidas) {
+        this.assistidas = new ArrayList<>(assistidas);
+    }
+    public void setDesejo(List<Serie> desejo) {
+        this.desejo = new ArrayList<>(desejo);
+    }
 
     // Adiciona aos favoritos (se ainda não tiver lá)
-    public void adicionarFavorito(Serie s) {
-        if (!favoritos.contains(s))
+    public boolean adicionarFavorito(Serie s) {
+        if (favoritos.contains(s)) {
+            JOptionPane.showMessageDialog(null, "Você já adicionou esta série à lista de favoritos!");
+            return false;
+        } else {
             favoritos.add(s);
+            return true;
+        }
     }
 
     // Remove dos favoritos
@@ -38,12 +52,15 @@ public class SerieManager implements Serializable {
         favoritos.remove(s);
     }
 
-    
-
     // Adiciona a lista de assistidas (se ainda não tiver lá)
-    public void adicionarAssistida(Serie s) {
-        if (!assistidas.contains(s))
+    public boolean adicionarAssistida(Serie s) {
+        if (assistidas.contains(s)) {
+            JOptionPane.showMessageDialog(null, "Você já adicionou esta série à lista de assistidas!");
+            return false;
+        } else {
             assistidas.add(s);
+            return true;
+        }
     }
 
     // Remove da lista de assistidas
@@ -51,20 +68,21 @@ public class SerieManager implements Serializable {
         assistidas.remove(s);
     }
 
-
-
     // Adiciona a lista de desejo (se ainda não tiver lá)
-    public void adicionarDesejo(Serie s) {
-        if (!desejo.contains(s))
+    public boolean adicionarDesejo(Serie s) {
+        if (desejo.contains(s)) {
+            JOptionPane.showMessageDialog(null, "Você já adicionou esta série à lista de desejo!");
+            return false;
+        } else {
             desejo.add(s);
+            return true;
+        }
     }
 
     // Remove da lista de desejo
     public void removerDesejo(Serie s) {
         desejo.remove(s);
     }
-
-
 
     // Ordena pela ordem alfabética
     public List<Serie> ordenarPorNome(List<Serie> lista) {
