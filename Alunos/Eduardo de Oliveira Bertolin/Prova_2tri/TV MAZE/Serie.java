@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 public class Serie implements Serializable {
     private int id;
@@ -26,6 +27,8 @@ public class Serie implements Serializable {
         this.emissora = emissora;
         this.imagemUrl = imagemUrl;
     }
+
+    // getters
 
     public int getId() {
         return id;
@@ -71,4 +74,18 @@ public class Serie implements Serializable {
     public String toString() {
         return nome + " | " + idioma + " | " + String.join(", ", generos) + " | Nota: " + notaGeral + " | " + estado;
     }
+
+    // implementação de equals e hashCode para garantir unicidade baseada no id
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true; // se for o mesmo objeto, true
+        if (obj == null || getClass() != obj.getClass()) return false; // se o objeto passado for null ou não for da mesma classe retorna false
+        Serie other = (Serie) obj; // faz cast para Serie
+        return id == other.id; // compara os ids, se forem iguais, considera os objetos iguais
+}
+
+    @Override
+        public int hashCode() {
+        return Objects.hash(id); // gera um hash baseado no id
+}
 }
