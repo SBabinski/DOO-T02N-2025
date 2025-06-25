@@ -1,6 +1,8 @@
 import com.google.gson.Gson;
 import java.io.*;
 
+import javax.swing.JOptionPane;
+
 // salvar e carregar dados do usuário e das séries em arquivos JSON
 public class Json {
     // onde o usuário será salvo
@@ -19,7 +21,8 @@ public class Json {
 
             return gson.fromJson(reader, Usuario.class);
         } catch (Exception e) {
-            // se erro retorna null
+            // erro retorna mensagem
+            JOptionPane.showMessageDialog(null, "Erro ao carregar usuário: " + e.getMessage());
             return null;
         }
     }
@@ -41,7 +44,8 @@ public class Json {
             // converte o conteúdo do arquivo JSON para um objeto SerieManager
             return gson.fromJson(reader, SerieManager.class);
         } catch (Exception e) {
-            // se erro retorna null
+            // se erro retorna mensagem
+            javax.swing.JOptionPane.showMessageDialog(null, "Erro ao carregar séries: " + e.getMessage());
             return null;
         }
     }
