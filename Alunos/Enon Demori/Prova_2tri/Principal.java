@@ -1,7 +1,9 @@
 package enon;
 
+import java.io.*;
 import java.util.List;
 import java.util.Scanner;
+
 import static enon.GerenciarListas.menuExibirListas;
 
 public class Principal {
@@ -37,6 +39,7 @@ public class Principal {
             System.out.println("Nenhuma série encontrada com o nome: " + nomeSerie);
             return;
         }
+
         System.out.println("\nSéries encontradas:");
         for (int i = 0; i < resultados.size(); i++) {
             SerieData serie = resultados.get(i);
@@ -60,18 +63,34 @@ public class Principal {
     public static void main(String[] args) {
         GerenciarListas.carregarListasDeJson();
 
-        System.out.println("Digite seu nome ou apelido:");
-        String nomeUsuario = scan.nextLine().trim();
-        while (nomeUsuario.isEmpty()) {
-            System.out.println("Nome inválido. Por favor, digite seu nome ou apelido:");
-            nomeUsuario = scan.nextLine().trim();
-        }
-        Usuario usuario = new Usuario(nomeUsuario);
-        System.out.println("Olá, " + usuario.getNome() + "! Bem-vindo ao sistema.");
+        String nomeSalvo = null;
+        try (BufferedReader reader = new BufferedReader(new FileReader("usuario.txt"))) {
+            nomeSalvo = reader.readLine();
+        } catch (IOException e) {
 
+        }
+
+        String nomeUsuario;
+
+        if (nomeSalvo != null && !nomeSalvo.trim().isEmpty()) {
+            nomeUsuario = nomeSalvo.trim();
+            System.out.println("Seja bem-vindo de volta, " + nomeUsuario + "!");
+        } else {
+            System.out.println("Digite seu nome ou apelido:");
+            nomeUsuario = scan.nextLine().trim();
+            while (nomeUsuario.isEmpty()) {
+                System.out.println("Nome inválido. Por favor, digite seu nome ou apelido:");
+                nomeUsuario = scan.nextLine().trim();
+            }
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("usuario.txt"))) {
+                writer.write(nomeUsuario);
+            } catch (IOException e) {
+                System.out.println("Erro ao salvar o nome do usuário.");
+            }
+            System.out.println("Olá, " + nomeUsuario + "! Bem-vindo ao sistema.");
+        }
         int opcao = 0;
         while (true) {
-
             System.out.println("-----------------------------------");
             System.out.println("1 - Consultar Série");
             System.out.println("2 - Gerenciar Listas");
@@ -81,22 +100,17 @@ public class Principal {
             opcao = tryCatchUniversalInt("Escolha uma opção:", 1, 3);
 
             switch (opcao) {
-
                 case 1:
                     consultarSerie();
                     break;
-
                 case 2:
                     menuExibirListas();
                     break;
-
                 case 3:
                     GerenciarListas.salvarListasEmJson();
                     System.out.println("Saindo do sistema. Até logo!");
                     System.exit(0);
             }
-
         }
-
     }
 }
