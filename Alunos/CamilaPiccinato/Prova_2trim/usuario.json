@@ -1,0 +1,77 @@
+{
+  "nome": "camila",
+  "favoritos": [
+    {
+      "name": "The Last of Us",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Action",
+        "Horror"
+      ],
+      "rating": {
+        "average": 8.0
+      },
+      "status": "Running",
+      "premiered": "2023-01-15",
+      "network": {
+        "name": "HBO"
+      }
+    },
+    {
+      "name": "Sex and the City",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance"
+      ],
+      "rating": {
+        "average": 7.1
+      },
+      "status": "Ended",
+      "premiered": "1998-06-06",
+      "ended": "2004-02-22",
+      "network": {
+        "name": "HBO"
+      }
+    }
+  ],
+  "assistidos": [
+    {
+      "name": "Demon Slayer",
+      "language": "Japanese",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Horror"
+      ],
+      "rating": {
+        "average": 8.0
+      },
+      "status": "Running",
+      "premiered": "2019-04-06",
+      "network": {
+        "name": "Fuji TV"
+      }
+    }
+  ],
+  "paraAssistir": [
+    {
+      "name": "The Penguin",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "rating": {
+        "average": 7.9
+      },
+      "status": "To Be Determined",
+      "premiered": "2024-09-19",
+      "network": {
+        "name": "HBO"
+      }
+    }
+  ]
+}
