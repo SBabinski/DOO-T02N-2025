@@ -1,0 +1,213 @@
+{
+  "deseja": [
+    {
+      "id": 6,
+      "name": "Sherlock",
+      "language": "English",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "summary": "\u003cp\u003eSherlock Holmes nos tempos modernos.\u003c/p\u003e",
+      "rating": {
+        "average": 9.1
+      },
+      "status": "Ended",
+      "premiered": "2010-07-25",
+      "ended": "2017-01-15",
+      "network": {
+        "name": "BBC"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dark",
+      "language": "German",
+      "genres": [
+        "Sci-Fi",
+        "Thriller",
+        "Drama"
+      ],
+      "summary": "\u003cp\u003eViagem no tempo e mistérios em uma cidade alemã.\u003c/p\u003e",
+      "rating": {
+        "average": 8.8
+      },
+      "status": "Ended",
+      "premiered": "2017-12-01",
+      "ended": "2020-06-27",
+      "network": {
+        "name": "Netflix"
+      }
+    },
+    {
+      "id": 5,
+      "name": "The Boys",
+      "language": "English",
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "summary": "\u003cp\u003eSuper-heróis fora de controle enfrentam justiça brutal.\u003c/p\u003e",
+      "rating": {
+        "average": 8.6
+      },
+      "status": "Running",
+      "premiered": "2019-07-26",
+      "network": {
+        "name": "Amazon Prime Video"
+      }
+    },
+    {
+      "id": 71246,
+      "name": "Match nas Estrelas",
+      "language": "Portuguese",
+      "genres": [
+        "Romance"
+      ],
+      "summary": "\u003cp\u003e\u003cb\u003eMatch nas Estrelas\u003c/b\u003e is an astrological dating show. There are twelve episodes in which a single person, who represents one of the zodiac signs, is introduced to four bachelors or bachelorettes with whom they have different astral compatibilities. Chatting and chemistry: everything can be a sign of what the stars want. After the dates, it\u0027s time to make a decision: listen to or ignore the stars?\u003c/p\u003e",
+      "rating": {},
+      "status": "To Be Determined",
+      "premiered": "2023-09-14",
+      "webChannel": {
+        "name": "Prime Video"
+      }
+    },
+    {
+      "id": 161,
+      "name": "Dexter",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Mystery"
+      ],
+      "summary": "\u003cp\u003eHe\u0027s smart, he\u0027s good looking, and he\u0027s got a great sense of humor. He\u0027s Dexter Morgan, everyone\u0027s favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself.\u003c/p\u003e",
+      "rating": {
+        "average": 8.4
+      },
+      "status": "Ended",
+      "premiered": "2006-10-01",
+      "ended": "2013-09-22",
+      "network": {
+        "name": "Paramount+ with Showtime"
+      }
+    }
+  ],
+  "favoritos": [
+    {
+      "id": 1,
+      "name": "Breaking Bad",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "summary": "\u003cp\u003eUm professor de química se torna traficante.\u003c/p\u003e",
+      "rating": {
+        "average": 9.5
+      },
+      "status": "Ended",
+      "premiered": "2008-01-20",
+      "ended": "2013-09-29",
+      "network": {
+        "name": "AMC"
+      }
+    },
+    {
+      "id": 161,
+      "name": "Dexter",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Mystery"
+      ],
+      "summary": "\u003cp\u003eHe\u0027s smart, he\u0027s good looking, and he\u0027s got a great sense of humor. He\u0027s Dexter Morgan, everyone\u0027s favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, and nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself.\u003c/p\u003e",
+      "rating": {
+        "average": 8.4
+      },
+      "status": "Ended",
+      "premiered": "2006-10-01",
+      "ended": "2013-09-22",
+      "network": {
+        "name": "Paramount+ with Showtime"
+      }
+    },
+    {
+      "id": 975,
+      "name": "Batman",
+      "language": "English",
+      "genres": [
+        "Comedy",
+        "Action",
+        "Adventure"
+      ],
+      "summary": "\u003cp\u003eWealthy entrepreneur Bruce Wayne and his ward Dick Grayson lead a double life: they are actually crime fighting duo Batman and Robin. A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including Catwoman, Egghead, The Joker, King Tut, The Penguin, and The Riddler.\u003c/p\u003e",
+      "rating": {
+        "average": 7.8
+      },
+      "status": "Ended",
+      "premiered": "1966-01-12",
+      "ended": "1968-03-14",
+      "network": {
+        "name": "ABC"
+      }
+    },
+    {
+      "id": 68552,
+      "name": "Amores que Engañan",
+      "language": "Spanish",
+      "genres": [],
+      "summary": "\u003cp\u003eAn anthology series featuring the stories of women who confront everyday relationships and modern hardships from domestic violence and heartbreak to mental illness and infertility.\u003c/p\u003e",
+      "rating": {},
+      "status": "Ended",
+      "premiered": "2022-05-14",
+      "ended": "2023-08-19",
+      "network": {
+        "name": "Lifetime"
+      }
+    }
+  ],
+  "assistidas": [
+    {
+      "id": 4,
+      "name": "The Office",
+      "language": "English",
+      "genres": [
+        "Comedy"
+      ],
+      "summary": "\u003cp\u003eO cotidiano de um escritório da Dunder Mifflin.\u003c/p\u003e",
+      "rating": {
+        "average": 8.9
+      },
+      "status": "Ended",
+      "premiered": "2005-03-24",
+      "ended": "2013-05-16",
+      "network": {
+        "name": "NBC"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Stranger Things",
+      "language": "English",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Horror"
+      ],
+      "summary": "\u003cp\u003eCoisas estranhas acontecem em Hawkins.\u003c/p\u003e",
+      "rating": {
+        "average": 8.7
+      },
+      "status": "Running",
+      "premiered": "2016-07-15",
+      "network": {
+        "name": "Netflix"
+      }
+    }
+  ]
+}
