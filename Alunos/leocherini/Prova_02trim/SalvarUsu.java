@@ -1,4 +1,4 @@
-package sistemaSerie;
+package sistemaserie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;

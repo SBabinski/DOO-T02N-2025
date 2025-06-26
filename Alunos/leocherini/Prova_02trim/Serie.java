@@ -1,61 +1,75 @@
-package sistemaSerie;
+package sistemaserie;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Serie {
-    private String nome;
-    private String idioma;
-    private List<String> generos;
-    private double nota;
+    private String name;
+    private String language;
+    private List<String> genres;
+    private Rating rating;
     private String status;
-    private String dataEstreia;
-    private String dataFim;
-    private String emissora;
+    private String premiered;
+    private String ended;
+    private Network network;
 
-    public Serie() {}
-
-    public Serie(String nome, String idioma, List<String> generos, double nota, String status, String dataEstreia, String dataFim, String emissora) {
-        this.nome = nome;
-        this.idioma = idioma;
-        this.generos = generos;
-        this.nota = nota;
-        this.status = status;
-        this.dataEstreia = dataEstreia;
-        this.dataFim = dataFim;
-        this.emissora = emissora;
+    public String getName() {
+        return name;
     }
 
-    public String getNome() { return nome; }
-    public String getIdioma() { return idioma; }
-    public List<String> getGeneros() { return generos; }
-    public double getNota() { return nota; }
-    public String getStatus() { return status; }
-    public String getDataEstreia() { return dataEstreia; }
-    public String getDataFim() { return dataFim; }
-    public String getEmissora() { return emissora; }
+    public String getLanguage() {
+        return language;
+    }
+
+    public List<String> getGenres() {
+        return genres;
+    }
+
+    public Rating getRating() {
+        return rating;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getPremiered() {
+        return premiered;
+    }
+
+    public String getEnded() {
+        return ended;
+    }
+
+    public Network getNetwork() {
+        return network;
+    }
 
     @Override
     public String toString() {
-        return "Série: " + nome +
-                "\nIdioma: " + idioma +
-                "\nGêneros: " + generos +
-                "\nNota: " + nota +
-                "\nStatus: " + status +
-                "\nEstreia: " + dataEstreia +
-                "\nFim: " + dataFim +
-                "\nEmissora: " + emissora + "\n";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Título: ").append(name).append("\n");
+        sb.append("Idioma: ").append(language).append("\n");
+        sb.append("Gêneros: ").append(genres).append("\n");
+        sb.append("Nota: ").append(rating != null && rating.getAverage() != null ? rating.getAverage() : "Sem nota").append("\n");
+        sb.append("Status: ").append(status).append("\n");
+        sb.append("Estreia: ").append(premiered != null ? premiered : "Desconhecida").append("\n");
+        sb.append("Fim: ").append(ended != null ? ended : "Ainda em exibição").append("\n");
+        sb.append("Emissora: ").append(network != null ? network.getName() : "Desconhecida").append("\n");
+        return sb.toString();
     }
-    
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Serie serie = (Serie) o;
-        return nome != null && nome.equalsIgnoreCase(serie.nome);
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Serie)) return false;
+        Serie other = (Serie) obj;
+        return name != null && name.equalsIgnoreCase(other.name);
     }
 
     @Override
     public int hashCode() {
-        return nome != null ? nome.toLowerCase().hashCode() : 0;
+        return name != null ? name.toLowerCase().hashCode() : 0;
     }
 }

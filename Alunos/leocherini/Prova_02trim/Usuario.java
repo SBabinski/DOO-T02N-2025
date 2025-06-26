@@ -1,4 +1,4 @@
-package sistemaSerie;
+package sistemaserie;
 
 import java.util.ArrayList;
 import java.util.List;

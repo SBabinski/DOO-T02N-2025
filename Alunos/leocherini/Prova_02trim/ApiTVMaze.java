@@ -1,23 +1,27 @@
-package sistemaSerie;
+package sistemaserie;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.*;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApiTVMaze {
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    @SuppressWarnings("unchecked")//so pra tirar os avisos
-	public static List<Serie> buscarSeries(String nome) {
+    public static List<Serie> buscarSeries(String nome) {
         List<Serie> series = new ArrayList<>();
         try {
-            String url = "https://api.tvmaze.com/search/shows?q=" + nome.replace(" ", "%20");
+            String nomeEncoded = URLEncoder.encode(nome, StandardCharsets.UTF_8);
+            String url = "https://api.tvmaze.com/search/shows?q=" + nomeEncoded;
+
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(url))
                     .GET()
@@ -25,24 +29,17 @@ public class ApiTVMaze {
 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            List<Map<String, Object>> lista = mapper.readValue(response.body(), new TypeReference<>() {});
-            for (Map<String, Object> item : lista) {
-                Map<String, Object> show = (Map<String, Object>) item.get("show");
-                if (show == null) continue;
-
-                Serie serie = new Serie(
-                        (String) show.get("name"),
-                        (String) show.get("language"),
-                        (List<String>) show.get("genres"),
-                        show.get("rating") != null && ((Map<?, ?>) show.get("rating")).get("average") != null ? ((Number) ((Map<?, ?>) show.get("rating")).get("average")).doubleValue() : 0.0,
-                        (String) show.get("status"),
-                        (String) show.get("premiered"),
-                        show.get("ended") != null ? (String) show.get("ended") : "-",
-                        show.get("network") != null ? (String) ((Map<?, ?>) show.get("network")).get("name") : "Desconhecida"
-                );
-
-                series.add(serie);
+            if (response.statusCode() == 200) {
+                List<SerieResult> resultados = mapper.readValue(response.body(), new TypeReference<>() {});
+                for (SerieResult result : resultados) {
+                    if (result.getShow() != null) {
+                        series.add(result.getShow());
+                    }
+                }
+            } else {
+                System.out.println("Erro na API: Código " + response.statusCode());
             }
+
         } catch (Exception e) {
             System.out.println("Erro ao buscar séries: " + e.getMessage());
         }
