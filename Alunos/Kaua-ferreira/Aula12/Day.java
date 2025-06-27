@@ -1,17 +1,16 @@
 package com.meuaplicativoclima.model;
 
 public class Day {
-    private String datetime; // Ex: "2024-06-26"
+    private String datetime; 
     private Double tempmax;
     private Double tempmin;
     private Double humidity;
-    private Double precip; // Quantidade de precipitação
-    private String conditions; // Condição do tempo (ex: "Partially cloudy")
+    private Double precip; 
+    private String conditions; 
     private Double windspeed;
-    private Double winddir; // Direção do vento em graus
-    // Se precisar de tipo de precipitação: private List<String> precipType;
+    private Double winddir;
 
-    // Getters e Setters
+   
     public String getDatetime() { return datetime; }
     public void setDatetime(String datetime) { this.datetime = datetime; }
     public Double getTempmax() { return tempmax; }
