@@ -35,7 +35,7 @@ public class main {
             }
 
             if (data.getDays() != null && !data.getDays().isEmpty()) {
-                Day today = data.getDays().get(0); // Pega o primeiro dia (hoje)
+                Day today = data.getDays().get(0); 
                 System.out.println("\n--- Previsão para Hoje (" + today.getDatetime() + ") ---");
                 System.out.println("Temperatura Máxima: " + today.getTempmax() + "°C");
                 System.out.println("Temperatura Mínima: " + today.getTempmin() + "°C");
@@ -52,7 +52,7 @@ public class main {
         scanner.close();
     }
 
-    // Método auxiliar para converter direção do vento em graus para uma string
+  
     private static String getWindDirection(Double degrees) {
         if (degrees == null) return "N/A";
         if (degrees >= 337.5 || degrees < 22.5) return "Norte";
