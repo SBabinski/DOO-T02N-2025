@@ -170,7 +170,7 @@ public class WeatherAppLauncher {
      */
     private static void showHelp() {
         System.out.println("\n=== WEATHER APP - AJUDA ===");
-        System.out.println("Uso: java WeatherAppLauncher_Fixed [opção]");
+        System.out.println("Uso: java WeatherAppLauncher [opção]");
         System.out.println("\nOpções:");
         System.out.println("  --gui, -g       Executar em modo interface gráfica");
         System.out.println("  --console, -c   Executar em modo console");
@@ -178,9 +178,9 @@ public class WeatherAppLauncher {
         System.out.println("\nSe nenhuma opção for fornecida, será exibido um");
         System.out.println("diálogo para escolher o modo de execução.");
         System.out.println("\nExemplos:");
-        System.out.println("  java WeatherAppLauncher_Fixed --gui");
-        System.out.println("  java WeatherAppLauncher_Fixed -c");
-        System.out.println("  java WeatherAppLauncher_Fixed");
+        System.out.println("  java WeatherAppLauncher --gui");
+        System.out.println("  java WeatherAppLauncher -c");
+        System.out.println("  java WeatherAppLauncher");
         System.out.println();
     }
 }
