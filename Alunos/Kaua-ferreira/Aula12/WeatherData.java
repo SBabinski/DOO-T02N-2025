@@ -3,9 +3,9 @@ package com.meuaplicativoclima.model;
 import java.util.List;
 
 public class WeatherData {
-    private String resolvedAddress; // Ex: "Brasilia, DF, Brazil"
-    private List<Day> days; // Lista de dias (para máximas/mínimas do dia)
-    private CurrentConditions currentConditions; // Condições atuais
+    private String resolvedAddress;
+    private List<Day> days; 
+    private CurrentConditions currentConditions;
 
     // Getters e Setters
     public String getResolvedAddress() { return resolvedAddress; }
