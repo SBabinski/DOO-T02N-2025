@@ -7,7 +7,7 @@ public class WeatherData {
     private List<Day> days; 
     private CurrentConditions currentConditions;
 
-    // Getters e Setters
+ 
     public String getResolvedAddress() { return resolvedAddress; }
     public void setResolvedAddress(String resolvedAddress) { this.resolvedAddress = resolvedAddress; }
     public List<Day> getDays() { return days; }
