@@ -1,15 +1,15 @@
 package com.meuaplicativoclima.model;
 
 public class CurrentConditions {
-    private String datetime; // Hora atual
-    private Double temp; // Temperatura atual
+    private String datetime; 
+    private Double temp; 
     private Double humidity;
     private Double precip;
     private Double windspeed;
     private Double winddir;
     private String conditions;
 
-    // Getters e Setters
+    
     public String getDatetime() { return datetime; }
     public void setDatetime(String datetime) { this.datetime = datetime; }
     public Double getTemp() { return temp; }
