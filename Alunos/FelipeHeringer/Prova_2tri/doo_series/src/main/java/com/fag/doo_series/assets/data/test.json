@@ -1,0 +1,63 @@
+{
+  "user_name" : "Teste",
+  "user_cpf" : "456.789.123-99",
+  "user_favorite_genres" : [ "Action", "Comedy", "Crime" ],
+  "favorite_series" : [ {
+    "series_id" : 46562,
+    "series_name" : "The Last of Us",
+    "series_language" : "English",
+    "series_rating" : 8.1,
+    "series_state" : "Running",
+    "series_image_url" : "https://static.tvmaze.com/uploads/images/original_untouched/563/1409008.jpg",
+    "series_broadcasting_station_name" : "HBO",
+    "series_genres" : [ "Drama", "Action", "Horror" ],
+    "series_premiered_date" : "2023-01-15",
+    "series_ended_date" : null
+  }, {
+    "series_id" : 161,
+    "series_name" : "Dexter",
+    "series_language" : "English",
+    "series_rating" : 8.4,
+    "series_state" : "Ended",
+    "series_image_url" : "https://static.tvmaze.com/uploads/images/original_untouched/498/1246067.jpg",
+    "series_broadcasting_station_name" : "Paramount+ with Showtime",
+    "series_genres" : [ "Drama", "Crime", "Mystery" ],
+    "series_premiered_date" : "2006-10-01",
+    "series_ended_date" : "2013-09-22"
+  } ],
+  "series_watch_later" : [ {
+    "series_id" : 2176,
+    "series_name" : "Marvel's The Defenders",
+    "series_language" : "English",
+    "series_rating" : 7.3,
+    "series_state" : "Ended",
+    "series_image_url" : "https://static.tvmaze.com/uploads/images/original_untouched/122/307234.jpg",
+    "series_broadcasting_station_name" : "Netflix",
+    "series_genres" : [ "Drama", "Action", "Crime" ],
+    "series_premiered_date" : "2017-08-18",
+    "series_ended_date" : "2017-08-18"
+  } ],
+  "series_watched" : [ {
+    "series_id" : 1266,
+    "series_name" : "DreamWorks Dragons",
+    "series_language" : "English",
+    "series_rating" : 7.9,
+    "series_state" : "Ended",
+    "series_image_url" : "https://static.tvmaze.com/uploads/images/original_untouched/7/18291.jpg",
+    "series_broadcasting_station_name" : "Cartoon Network",
+    "series_genres" : [ "Adventure", "Family", "Fantasy" ],
+    "series_premiered_date" : "2012-08-07",
+    "series_ended_date" : "2014-03-05"
+  }, {
+    "series_id" : 83,
+    "series_name" : "The Simpsons",
+    "series_language" : "English",
+    "series_rating" : 8.1,
+    "series_state" : "Running",
+    "series_image_url" : "https://static.tvmaze.com/uploads/images/original_untouched/488/1222067.jpg",
+    "series_broadcasting_station_name" : "FOX",
+    "series_genres" : [ "Comedy", "Family" ],
+    "series_premiered_date" : "1989-12-17",
+    "series_ended_date" : null
+  } ]
+}
